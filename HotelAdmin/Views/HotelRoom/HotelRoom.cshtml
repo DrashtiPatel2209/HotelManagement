@@ -1,0 +1,60 @@
+﻿@model HotelAdmin.Models.HotelRoom_Model
+
+@{
+    ViewBag.Title = "HotelRoom";
+    Layout = "~/Views/Shared/_LayoutPage5.cshtml";
+}
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+<h2>HotelRoom</h2>
+<div class="panel">
+                        <header class="panel-heading">
+                           
+                        </header>
+                        <div class="panel-body">
+                            <div class=" form">
+                                <div class="cmxform form-horizontal adminex-form" id="commentForm">
+                                    
+                                    <div class="form-group ">
+                                          @Html.Label("RoomTypeID", new { @class="control-label col-lg-2"})
+                                       <div class="col-lg-10">
+                                            
+                                           
+                                             @Html.DropDownList("RoomTypeID",(IEnumerable<SelectListItem>)ViewBag.roomtype,"--Select--", new { @class="form-control"})
+
+                                             @Html.ValidationMessageFor(model => model.RoomTypeID)
+                                        </div>
+                                        
+                                    </div>
+                                   
+									<div class="form-group ">
+                                          @Html.Label("NumberOfRooms", new { @class="control-label col-lg-2"})
+                                       
+                                        <div class="col-lg-10">
+                                            
+                                             @Html.TextBoxFor(model => model.NumberOfRoom, new { @class="form-control"})
+                                             @Html.ValidationMessageFor(model => model.NumberOfRoom)
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-2 col-lg-10">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+       
+
+       
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

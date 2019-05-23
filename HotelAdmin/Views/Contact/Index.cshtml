@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<div class="container_12">
+
+	<!-- Map -->
+	<section class="contact_map grid_12">
+		<script>
+			$(function() {
+   				var map = new google.maps.Map(document.getElementById('map'), {
+   					zoom: 17,
+   					center: new google.maps.LatLng(40.7069, -74.0096),
+   					mapTypeId: google.maps.MapTypeId.ROADMAP
+	   			});
+   				var marker= new google.maps.Marker({
+					position: new google.maps.LatLng(40.7069, -74.0096),
+					map: map
+				});
+			});
+		</script>
+		<div id="map"></div>
+	</section>
+
+	<div class="clearfix"></div>
+	<hr class="dashed grid_12" />
+
+	<!-- About -->
+	<section class="about text grid_8">
+		<h2 class="text_big">Travel Agency</h2>
+
+		<p class="address">
+			<span><img src='@Url.Content("~/images1/address.png")' alt="" /> 123 Wall Street , New York</span>
+			<span><img src='@Url.Content("~/images1/email.png")' alt="" /> contact@travelagency.com</span>
+			<span><img src='@Url.Content("~/images1/phone.png")' alt="" /> (111) 100-1000</span>
+		</p>
+
+		<hr class="dashed" />
+
+		<h3>Praesent laoreet sem sit amet urna dapibus?</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus placerat risus, ac vulputate enim facilisis eu. In sodales lacinia elit, ut rhoncus risus consequat sit amet. Suspendisse potenti. Nam imperdiet lacinia aliquet. Donec odio risus, dignissim id placerat et, molestie sed ligula.</p>
+
+		<hr class="dashed" />
+
+		<h3>Aenean nibh sem, placerat ac laoreet ac?</h3>
+		<p>Vestibulum placerat rhoncus massa, vel viverra ligula placerat sit amet. Aenean nibh sem, placerat ac laoreet ac, ullamcorper in est. Nulla facilisi. Suspendisse potenti. Maecenas mollis dui id lacus semper sit amet accumsan augue rhoncus. Ut sed felis eget mi placerat accumsan ut vel risus.</p>
+	</section>
+
+	<!-- Contact form -->
+	<section class="contact_form simple grid_4">
+		
+		<h2 class="text_big">Leave us a message</h2>
+
+		<form action="#" id="contact_form">
+			<label>Your name</label>
+			<input type="text" name="name" />
+
+			<label>Your email</label>
+			<input type="email" name="email" />
+
+			<label>Message</label>
+			<div class="textarea">
+				<textarea name="message" cols="30" rows="10"></textarea>
+			</div>
+
+			<input type="submit" value="Send" class="auto_width">
+			
+			<p class="status"></p>
+
+		</form>
+
+	</section>
+
+</div> 
+ 
+

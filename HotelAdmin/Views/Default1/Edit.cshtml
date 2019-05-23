@@ -1,0 +1,83 @@
+﻿@model HotelAdmin.Models.MasterCategory_model
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+         <div class="wrapper">
+             <div class="row">
+                <div class="col-sm-12">
+                <section class="panel">
+                <header class="panel-heading">
+                
+                    <span class="tools pull-right">
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                        <a href="javascript:;" class="fa fa-times"></a>
+                     </span>
+                </header>
+                <div class="panel-body">
+                <div class="adv-table editable-table ">
+                <div class="clearfix">
+                    
+                </div>
+                <div class="space15"></div>
+                <table class="table table-striped table-hover table-bordered" id="editable-sample">
+               <legend>MasterCategory</legend>
+
+                <tbody>
+                
+ <thead>
+      <tr>
+                    <th> <div class="editor-label">
+            @Html.LabelFor(model => model.CategoryId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CategoryId)
+            @Html.ValidationMessageFor(model => model.CategoryId)
+        </div>
+
+                    </th>
+                    <th> <div class="editor-label">
+            @Html.LabelFor(model => model.CategoryName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CategoryName)
+            @Html.ValidationMessageFor(model => model.CategoryName)
+        </div>
+
+                    </th>
+                    <th> <div class="editor-label">
+            @Html.LabelFor(model => model.CategoryDescription)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CategoryDescription)
+            @Html.ValidationMessageFor(model => model.CategoryDescription)
+        </div>
+
+                    </th>
+                    </tr>
+     </thead>
+                     </tbody>
+                </table>
+                </div>
+                </div>
+                </section>
+                </div>
+                </div>
+               <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

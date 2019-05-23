@@ -1,0 +1,73 @@
+﻿@model HotelAdmin.Models.MasterComplain_model
+
+@{
+    ViewBag.Title = "Complain";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Complain</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    
+       <div class="panel">
+                        <header class="panel-heading">
+                           Complain
+                        </header>
+                        <div class="panel-body">
+                            <div class=" form">
+                                <div class="cmxform form-horizontal adminex-form" id="commentForm">
+                                   
+                                    
+									<div class="form-group ">
+                                       
+                                         @Html.LabelFor(model => model.UserID, new{ @Class="control-label col-lg-2"})
+                                        <div class="col-lg-10">
+                                          
+                                            @Html.TextBoxFor(model => model.UserID, new { @class=" form-control" })
+                                            @Html.ValidationMessageFor(model => model.UserID)
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                         @Html.LabelFor(model => model.ComplainSubject, new { @Class="control-label col-lg-2"})
+                                        <div class="col-lg-10">
+                                             @Html.TextAreaFor(model => model.ComplainSubject, new { @Class="form-control"})
+                                               @Html.ValidationMessageFor(model => model.ComplainSubject)
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                         @Html.LabelFor(model => model.ComplainDescription, new { @Class="control-label col-lg-2"})
+                                        <div class="col-lg-10">
+                                             @Html.TextAreaFor(model => model.ComplainDescription, new { @Class="form-control"})
+                                             @Html.ValidationMessageFor(model => model.ComplainDescription)
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                         @Html.LabelFor(model => model.Reply, new { @Class="control-label col-lg-2"})
+                                        <div class="col-lg-10">
+                                             @Html.TextAreaFor(model => model.Reply, new { @Class="form-control"})
+                                             @Html.ValidationMessageFor(model => model.Reply)
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-2 col-lg-10">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+      
+    
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+

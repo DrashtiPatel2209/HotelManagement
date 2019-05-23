@@ -1,0 +1,114 @@
+﻿@model HotelAdmin.Models.MasterHotelRegistration_model
+
+@{
+    Layout = null;
+ }
+
+
+   
+<h2>HotelRegistration</h2>
+<!DOCTYPE html>
+
+
+    
+    <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>Hotel Registration</title>
+
+    <link href='@Url.Content("~/css/style.css")' rel="stylesheet">
+    <link href='@Url.Content("~/css/style-responsive.css")' rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src='@Url.Content("~/js/html5shiv.js")'></script>
+    <script src='@Url.Content("~/js/respond.min.js")'></script>
+    <![endif]-->
+</head>
+
+<body class="login-body">
+@using (Html.BeginForm("HotelRegistration", "HotelRegistration", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+
+<div class="container">
+
+    <div class="form-signin" action="index.html">
+        <div class="form-signin-heading text-center">
+            <h1 class="sign-title">Registration</h1>
+            <img src="images" alt=""/>
+        </div>
+
+
+        <div class="login-wrap">
+            <p><center>Hotel Registration</center></p>
+         
+             @Html.TextBoxFor(model => model.HotelName, new {@class="form-control",@placeholder ="Hotel Name" })
+                @Html.ValidationMessageFor(model => model.HotelName)
+           
+                                            
+                                           
+         @Html.DropDownList("HotelTYpeID",(IEnumerable<SelectListItem>)ViewBag.HotelType,"--Select--", new { @class="form-control",@placeholder ="Hotel Type"})
+
+            @Html.ValidationMessageFor(model => model.HotelID)
+                                        
+       
+             @Html.TextBoxFor(model => model.Address, new {@class="form-control",@placeholder ="Address" })
+                @Html.ValidationMessageFor(model => model.Address)
+
+                 @Html.TextBoxFor(model => model.Pincode, new {@class="form-control",@placeholder ="Pincode" })
+                @Html.ValidationMessageFor(model => model.Pincode)
+
+			  @Html.TextBoxFor(model => model.EmailID, new {@class="form-control",@placeholder ="Email ID" })
+                @Html.ValidationMessageFor(model => model.EmailID)
+
+          
+            @Html.PasswordFor(model => model.Password, new {@class="form-control",@placeholder ="Password" })
+                @Html.ValidationMessageFor(model => model.Password)
+           
+            <input type="file" name="file1" />
+
+            <label class="checkbox">
+                <input type="checkbox" value="agree this condition"> I agree to the Terms of Service and Privacy Policy
+            </label>
+            <button type="submit" class="btn btn-lg btn-login btn-block">
+                <i class="fa fa-check"></i>
+            </button>
+
+            <div class="registration">
+                Already Registered.
+                <a href='@Url.Action("Login","Admin")' class="">
+                    Login
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+}
+<!-- Placed js at the end of the document so the pages load faster -->
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src='@Url.Content("~/js/jquery-1.10.2.min.js")'></script>
+<script src='@Url.Content("~/js/bootstrap.min.js")'></script>
+<script src='@Url.Content("~/js/modernizr.min.js")'></script>
+
+</body>
+</html>
+
+
+ }
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

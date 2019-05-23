@@ -1,0 +1,76 @@
+﻿@model IEnumerable<HotelAdmin.DBML.MasterComplain>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+  <div class="wrapper">
+        <div class="row">
+        <div class="col-sm-12">
+        <section class="panel">
+        <header class="panel-heading">
+            Dynamic Table
+            <span class="tools pull-right">
+                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                <a href="javascript:;" class="fa fa-times"></a>
+             </span>
+        </header>
+        <div class="panel-body">
+        <div class="adv-table">
+        <table  class="display table table-bordered table-striped" id="dynamic-table">
+        <thead>
+             <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComplainSubject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComplainDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reply)
+        </th>
+        <th></th>
+    </tr>
+        
+        </thead>
+        <tbody>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComplainSubject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComplainDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reply)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ComplainID }) |
+
+            @Html.ActionLink("Delete", "Delete", new { id=item.ComplainID })
+        </td>
+    </tr>
+}
+        
+        </tbody>
+       
+        </table>
+        </div>
+        </div>
+        </section>
+        </div>
+        </div>
+

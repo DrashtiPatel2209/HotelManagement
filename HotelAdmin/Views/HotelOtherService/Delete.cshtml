@@ -1,0 +1,54 @@
+﻿@model HotelAdmin.Models.HotelOtherService_model
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage5.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>HotelOtherService_model</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OtherServiceID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OtherServiceID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TexiService)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TexiService)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PickupPlace)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PickupPlace)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DestinationPlace)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DestinationPlace)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VehicleType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VehicleType)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

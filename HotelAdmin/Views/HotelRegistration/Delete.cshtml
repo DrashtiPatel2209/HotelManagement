@@ -1,0 +1,68 @@
+﻿@model HotelAdmin.Models.MasterHotelRegistration_model
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage5.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>MasterHotelRegistration_model</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HotelID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HotelID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HotelName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HotelName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HotelTypeID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HotelTypeID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Pincode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pincode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmailID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmailID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

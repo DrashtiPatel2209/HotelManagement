@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hotels.in</title>
+    <meta charset="utf-8" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Load CSS -->
+	<link rel="stylesheet" href='@Url.Content("~/css1/style.css")' />
+	<link rel="stylesheet" href='@Url.Content("~/css1/jquery.fancybox-1.3.4.css")' />
+	<link rel="stylesheet" href='@Url.Content("~/css1/jquery-ui-1.8.16.custom.css")'>
+
+	<!-- Page icon -->
+
+	<!-- Load Modernizr -->
+	<script src='@Url.Content("~/js1/modernizr-2.0.min.js")'></script>
+
+	<!-- Load JavaScript -->
+	<script src='@Url.Content("~/js1/jquery.min.js")'></script>
+	<script>window.jQuery || document.write('<script src='@Url.Content("~/js1/jquery-1.6.2.min.js")'></script>)'</script>
+	<script src='@Url.Content("~/js1/jquery-ui-1.8.16.custom.min.js")'></script>
+	<script src='@Url.Content("~/js1/script.js")'></script>
+	<script src='@Url.Content("~/js1/jquery.fancybox-1.3.4.pack.js")'></script>
+	<script src='@Url.Content("~/js1/datepicker.js")'></script>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+</head>
+<body>
+    <header style="background-image:url(/images1/12_2.jpg)">
+	
+	<div class="container_12">
+
+		<!-- Title and navigation panel -->
+		<div id="panel" class="grid_12">
+
+			<!-- Title -->
+			<h1><a href="index.html">Hotel</a></h1>
+
+			<!-- Navigation -->
+			<nav>
+				<ul>
+					<li>
+						<a href="browseall.html" class="selected">Browse</a>
+						<ul>	
+							<li><a href="browseall.html">Browse all</a></li>
+							<li><a href="browsehotels.html">Browse hotels</a></li>
+							<li><a href="hotel.html" class="selected">Hotel</a></li>
+							
+						</ul>
+					</li>
+					<li>
+						<a href="faq.html">Pages</a>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="forms.html">Forms</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="blog.html">Blog</a>
+						<ul>
+							<li><a href="blog.html">Blog</a></li>
+							
+						</ul>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+
+				<!-- Search -->
+				<form action="#" class="black">
+					<input name="search" type="text" placeholder="Search..." />
+					<input type="submit" />
+				</form>
+			</nav>
+		
+		</div>
+
+	</div>
+
+
+        <nav class="slider_nav">
+		<a href="#" class="left">&nbsp;</a>
+		<a href="#" class="right">&nbsp;</a>
+	</nav>
+       
+
+        <div class="slider_wrapper">
+
+		<!-- Slider content -->
+		<ul class="homepage_slider">
+           
+
+			<!-- First slide -->
+			<li>
+				<h2><a href="trip.html">Welcome <strong>:)</strong></a></h2>
+				<p></p>
+			</li>
+
+			<!-- Second slide -->
+			<li>
+				<h2><a href="hotel.html">A wonderful week in Singapore from <strong>999 �</strong></a></h2>
+				<p></p>
+			</li>
+
+		</ul>
+
+		<div class="clearfix"></div>
+	</div>
+
+</header>
+       <div>
+       
+        @RenderBody()
+    </div>
+    <footer><div class="container_12">
+		
+		<nav class="grid_8">
+			<a href="#">Home</a>
+			<a href="#">Blog</a>
+			<a href="#">Contact</a>
+			<a href="#">FAQ</a>
+		</nav>
+
+		<p class="address grid_4">
+			<strong>Hotels Agency Inc.</strong><br />
+			<span>EL-2 Suramya , Satellite</span><br />
+			<span><a href="mailto:karishmabhimani10@gmail.com">contact@Hotelagency.com</a></span>
+		</p>
+
+		<p class="copyright grid_8">
+			© 2015 Hotel Agency
+		</p>
+
+	</div></footer>
+
+
+	<!-- Google Analytics -->
+	<script type="text/javascript">
+	    var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', 'UA-2529322-12']); // Set your Google Analytics ID here
+	    _gaq.push(['_trackPageview']);
+
+	    (function() {
+	        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	    })();
+	</script>
+
+
+
+ 
+</body>
+</html>

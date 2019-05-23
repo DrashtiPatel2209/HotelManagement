@@ -1,0 +1,84 @@
+﻿@model HotelAdmin.Models.MasterHotelType_model
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div class="wrapper">
+             <div class="row">
+                <div class="col-sm-12">
+                <section class="panel">
+                <header class="panel-heading">
+                
+                    <span class="tools pull-right">
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                        <a href="javascript:;" class="fa fa-times"></a>
+                     </span>
+                </header>
+                <div class="panel-body">
+                <div class="adv-table editable-table ">
+                <div class="clearfix">
+                    
+                </div>
+                <div class="space15"></div>
+                <table class="table table-striped table-hover table-bordered" id="editable-sample">
+             <legend>MasterHotelType</legend>
+                <tbody>
+                
+ <thead>
+       
+       <tr>
+                    <th> <div class="editor-label">
+            @Html.LabelFor(model => model.HotelTypeID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HotelTypeID)
+            @Html.ValidationMessageFor(model => model.HotelTypeID)
+        </div>
+
+                    </th>
+                    <th>  <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div></th>
+                    <th> <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div></th>
+                    
+                </tr>
+     </thead>
+
+       
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+                    
+                     </tbody>
+                </table>
+                </div>
+                </div>
+                </section>
+                </div>
+                </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

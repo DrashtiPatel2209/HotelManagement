@@ -1,0 +1,47 @@
+﻿@model HotelAdmin.Models.Area_model
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Area_model</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AreaID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AreaID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AreaName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AreaName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AreaDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AreaDescription)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CityID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CityID)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

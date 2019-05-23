@@ -1,0 +1,47 @@
+﻿@model HotelAdmin.Models.SubCategory_model
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>SubCategory_model</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SubCategoryID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubCategoryID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SubCategoryName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubCategoryName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SubCategoryDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubCategoryDescription)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CategoryID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CategoryID)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

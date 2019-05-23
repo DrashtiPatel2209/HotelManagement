@@ -1,0 +1,79 @@
+﻿@model HotelAdmin.Models.HotelOtherService_model
+
+@{
+    ViewBag.Title = "HotelOtherService";
+    Layout = "~/Views/Shared/_LayoutPage5.cshtml";
+}
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+<h2>HotelOtherService</h2>
+ <div class="panel">
+                        <header class="panel-heading">
+                           
+                        </header>
+                        <div class="panel-body">
+                            <div class=" form">
+                                <div class="cmxform form-horizontal adminex-form" id="commentForm">
+                                    <div class="form-group ">
+                                          @Html.Label("TexiService", new { @class="control-label col-lg-2"})
+                                       
+                                        <div class="col-lg-10">
+                                            
+                                           
+                                             @Html.TextBoxFor(model => model.TexiService, new { @class="form-control"})
+
+                                             @Html.ValidationMessageFor(model => model.TexiService)
+                                        </div>
+                                    </div>
+                                   
+									<div class="form-group ">
+                                          @Html.Label("PickupPlace", new { @class="control-label col-lg-2"})
+                                       
+                                       
+                                        <div class="col-lg-10">
+                                            
+                                             @Html.TextBoxFor(model => model.PickupPlace, new { @class="form-control"})
+                                             @Html.ValidationMessageFor(model => model.PickupPlace)
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        
+                                        @Html.Label("DestinationPlace", new { @class="control-label col-lg-2"})
+                                        <div class="col-lg-10">
+                                            
+                                             @Html.TextBoxFor(model => model.DestinationPlace, new { @class="form-control"})
+                                             @Html.ValidationMessageFor(model => model.DestinationPlace)
+                                        </div>
+                                    </div>
+                                     <div class="form-group ">
+                                        
+                                        @Html.Label("VehicleType", new { @class="control-label col-lg-2"})
+                                        <div class="col-lg-10">
+                                            
+                                             @Html.TextBoxFor(model => model.VehicleType, new { @class="form-control"})
+                                             @Html.ValidationMessageFor(model => model.VehicleType)
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-2 col-lg-10">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+       
+
+       
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

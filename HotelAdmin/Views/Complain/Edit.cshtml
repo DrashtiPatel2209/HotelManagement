@@ -1,0 +1,65 @@
+﻿@model HotelAdmin.Models.MasterComplain_model
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>MasterComplain_model</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ComplainID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ComplainID)
+            @Html.ValidationMessageFor(model => model.ComplainID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UserID)
+            @Html.ValidationMessageFor(model => model.UserID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ComplainSubject)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ComplainSubject)
+            @Html.ValidationMessageFor(model => model.ComplainSubject)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ComplainDescription)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ComplainDescription)
+            @Html.ValidationMessageFor(model => model.ComplainDescription)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Reply)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Reply)
+            @Html.ValidationMessageFor(model => model.Reply)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

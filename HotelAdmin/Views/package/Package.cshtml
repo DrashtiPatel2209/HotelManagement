@@ -1,0 +1,100 @@
+﻿@model HotelAdmin.Models.package_model
+
+@{
+    ViewBag.Title = "Package";
+    Layout = "~/Views/Shared/_LayoutPage5.cshtml";
+}
+
+@using (Html.BeginForm("Package", "Package", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+<h2>Package</h2>
+ <div class="panel">
+                        <header class="panel-heading">
+                           
+                        </header>
+                        <div class="panel-body">
+                            <div class=" form">
+                                <div class="cmxform form-horizontal adminex-form" id="commentForm">
+                                   
+                                    <div class="form-group ">
+                                          @Html.Label("PackageName", new { @class="control-label col-lg-2"})
+                                       
+                                        <div class="col-lg-10">
+                                            
+                                           
+                                             @Html.TextBoxFor(model => model.PackageName, new { @class="form-control"})
+
+                                             @Html.ValidationMessageFor(model => model.PackageName)
+                                        </div>
+                                    </div>
+                                   
+									<div class="form-group ">
+                                          @Html.Label("PackageDescription", new { @class="control-label col-lg-2"})
+                                       
+                                        <div class="col-lg-10">
+                                            
+                                             @Html.TextBoxFor(model => model.packageDescription, new { @class="form-control"})
+                                             @Html.ValidationMessageFor(model => model.packageDescription)
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        
+                                         @Html.Label("StartDate", new { @class="control-label col-lg-2"})
+                                        <div class="col-lg-10">
+                                            
+                                             @Html.TextBoxFor(model => model.StartDate, new { @class="form-control"})
+                                             @Html.ValidationMessageFor(model => model.StartDate)
+                                        </div>
+                                    </div>
+                                     <div class="form-group ">
+                                        
+                                       @Html.Label("EndDate", new { @class="control-label col-lg-2"})
+                                        <div class="col-lg-10">
+                                            
+                                             @Html.TextBoxFor(model => model.EndDate, new { @class="form-control"})
+                                             @Html.ValidationMessageFor(model => model.EndDate)
+                                        </div>
+                                    </div>
+                                     <div class="form-group ">
+                                        
+                                        @Html.Label("Amount", new { @class="control-label col-lg-2"})
+                                        <div class="col-lg-10">
+                                            
+                                             @Html.TextBoxFor(model => model.Amount, new { @class="form-control"})
+                                             @Html.ValidationMessageFor(model => model.Amount)
+                                        </div>
+                                    </div>
+                                   
+                                      <div class="form-group ">
+                                        
+                                        @Html.Label("Photo", new { @class="control-label col-lg-2"})
+                                        <div class="col-lg-10">
+                                            
+                                             <input type="file" name="file1" />
+                                             @Html.ValidationMessageFor(model => model.Amount)
+                                        </div>
+                                    </div>
+                                   
+
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-2 col-lg-10">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+       
+
+       
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

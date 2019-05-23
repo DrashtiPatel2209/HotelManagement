@@ -1,0 +1,57 @@
+﻿
+@model HotelAdmin.Models.MasterCategory_model
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <h2>Category</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    
+         <header class="panel-heading">
+                            Category
+                        </header>
+                        <div class="panel-body">
+                            <div class=" form">
+                                <div class="cmxform form-horizontal adminex-form" id="commentForm" method="get" action="">
+                                    <div class="form-group ">
+                                        
+                                        @Html.LabelFor(model => model.CategoryName, new { @class="control-label col-lg-2"})
+                                        <div class="col-lg-10">
+                                        @Html.TextBoxFor(model => model.CategoryName, new { @class="form-control"})
+                                        @Html.ValidationMessageFor(model => model.CategoryName)
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        
+                                        @Html.LabelFor(model => model.CategoryDescription, new { @class="control-label col-lg-2"})
+                                        <div class="col-lg-10">
+                                            
+                                            @Html.TextAreaFor(model => model.CategoryDescription, new { @class="form-control "})
+                                            @Html.ValidationMessageFor(model => model.CategoryDescription)
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-2 col-lg-10">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                   
+    }
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+

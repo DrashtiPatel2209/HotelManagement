@@ -1,0 +1,119 @@
+﻿@model HotelAdmin.Models.UserRegistration_model
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage3.cshtml";
+}
+<h2>Registration</h2>
+@using (Html.BeginForm())   {
+    @Html.ValidationSummary(true)
+
+<div class="container_12">
+    
+	<!-- Filter -->
+	<section class="grid_8">
+
+		<div action="#" class="grey">
+
+			<div class="half">
+			 @Html.Label("User ID")	
+               @Html.TextBoxFor(model => model.UserID)
+                 @Html.ValidationMessageFor(model => model.UserID)
+			</div>
+
+			<div class="half last">
+                 @Html.Label("User Name")	
+               @Html.TextBoxFor(model => model.UserName)
+                 @Html.ValidationMessageFor(model => model.UserName)
+				
+			
+			</div>
+
+			<div class="half">
+				 @Html.Label("Password")	
+               @Html.PasswordFor(model => model.Password)
+                 @Html.ValidationMessageFor(model => model.Password)
+				
+			
+			</div>
+
+			<div class="half last">
+				 @Html.Label("User PhoneNuumber")	
+               @Html.TextBoxFor(model => model.UserPhoneNumber)
+                 @Html.ValidationMessageFor(model => model.UserPhoneNumber)
+				
+			
+			</div>
+
+			<div class="half">
+				 @Html.Label("UserAddress")	
+               @Html.TextBoxFor(model => model.UserAddress)
+                 @Html.ValidationMessageFor(model => model.UserAddress)
+				</div>
+
+			<div class="half last">
+				@Html.Label("CityID")	
+                 @Html.TextBoxFor(model => model.CityID)
+                 @Html.ValidationMessageFor(model => model.CityID)
+                
+
+                                        
+				
+			</div>
+
+			<div class="half">
+				@Html.Label("AreaID")	
+               @Html.TextBoxFor(model => model.AreaID)
+                 @Html.ValidationMessageFor(model => model.AreaID)
+				
+			</div>
+
+			<div class="half last">
+				@Html.Label("UserDOB")	
+               @Html.TextBoxFor(model => model.UserDOB)
+                 @Html.ValidationMessageFor(model => model.UserDOB)
+				
+			</div>
+
+			<div class="half">
+				@Html.Label("Gender")	
+               @Html.TextBoxFor(model => model.Gender)
+                 @Html.ValidationMessageFor(model => model.Gender)
+				
+			</div>
+
+			
+
+			<div class="half last">
+				@Html.Label("UserOccupation")	
+               @Html.TextBoxFor(model => model.UserOccupation)
+                 @Html.ValidationMessageFor(model => model.UserOccupation)
+				
+				
+			</div>
+
+			<div class="half">
+				@Html.Label("MaritialStatus")	
+               @Html.TextBoxFor(model => model.MaritialStatus)
+                 @Html.ValidationMessageFor(model => model.MaritialStatus)
+			</div>
+
+            <div class="half last">
+				@Html.Label("Email ID")	
+               @Html.TextBoxFor(model => model.EmailID)
+                 @Html.ValidationMessageFor(model => model.EmailID)
+			</div>
+
+			<div class="clearfix"></div>
+
+			<input type="submit" value="Submit" class="auto_width" />
+
+		</div>
+
+	</section>
+
+	
+	
+</div> 
+ 
+}

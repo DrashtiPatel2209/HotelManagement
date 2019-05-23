@@ -1,0 +1,48 @@
+﻿@model HotelAdmin.Models.MasterFeedback_model
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>MasterFeedback_model</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FeedbackID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FeedbackID)
+            @Html.ValidationMessageFor(model => model.FeedbackID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UserID)
+            @Html.ValidationMessageFor(model => model.UserID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FeedbackDescription)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FeedbackDescription)
+            @Html.ValidationMessageFor(model => model.FeedbackDescription)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

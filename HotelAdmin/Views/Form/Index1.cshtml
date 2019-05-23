@@ -1,0 +1,98 @@
+﻿@model IEnumerable<HotelAdmin.DBML.UserRegistration>
+
+@{
+    ViewBag.Title = "Index1";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Index1</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Index")
+</p>
+<div class="wrapper">
+        <div class="row">
+        <div class="col-sm-12">
+        <section class="panel">
+        <header class="panel-heading">
+            Dynamic Table
+            <span class="tools pull-right">
+                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                <a href="javascript:;" class="fa fa-times"></a>
+             </span>
+        </header>
+        <div class="panel-body">
+        <div class="adv-table">
+<table  class="display table table-bordered table-striped" id="dynamic-table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserPhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserAddress)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.AreaID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserDOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserOccupation)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Email_id)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserPhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserAddress)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserDOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserOccupation)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Email_id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.UserID}) |
+     
+            @Html.ActionLink("Delete", "Delete", new {id=item.UserID})
+        </td>
+    </tr>
+}
+
+  </tbody>
+        <tfoot>
+       
+        </tfoot>
+        </table>
+        </div>
+        </div>
+        </section>
+        </div>
+        </div>

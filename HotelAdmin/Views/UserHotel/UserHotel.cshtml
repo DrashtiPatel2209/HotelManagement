@@ -1,0 +1,80 @@
+﻿@model HotelAdmin.Models.UserHotel_Model
+@{
+    ViewBag.Title = "UserHotel";
+    Layout = "~/Views/Shared/_LayoutPage3.cshtml";
+}
+
+<h2>UserHotel</h2>
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+<div class="container_12">
+
+	<!-- Filter -->
+	<section class="grid_8">
+
+		<div action="#" class="grey">
+
+			<div class="half">
+				
+                    @Html.Label("User ID")	<br/>
+              
+                  @Html.DropDownList("UserID",(IEnumerable<SelectListItem>)ViewBag.user,"--Select--", new { @class="form-control"})
+                 @Html.ValidationMessageFor(model => model.UserID)
+			</div>
+            <div class="half">
+				  @Html.Label("Hotel ID")	<br/>
+                    @Html.DropDownList("HotelID",(IEnumerable<SelectListItem>)ViewBag.hotel,"--Select--")
+                 @Html.ValidationMessageFor(model => model.HotelID)
+			</div>
+			<div class="half">
+				 @Html.Label("Checkindate")	
+				  @Html.TextBoxFor(model => model.Checkindate)
+                 @Html.ValidationMessageFor(model => model.Checkindate)
+			</div>
+                <div class="half">
+				 @Html.Label("Checkoutdate")	
+				  @Html.TextBoxFor(model => model.Checkoutdate)
+                 @Html.ValidationMessageFor(model => model.Checkoutdate)
+			</div>
+
+            <div class="half">
+				 @Html.Label("NumberOfAdultperson")	
+				  @Html.TextBoxFor(model => model.NumberOfAdultPerson)
+                 @Html.ValidationMessageFor(model => model.NumberOfAdultPerson)
+			</div>
+             <div class="half">
+				 @Html.Label("NumberOfChildperson")	
+				  @Html.TextBoxFor(model => model.NumberOfChildPerson)
+                 @Html.ValidationMessageFor(model => model.NumberOfChildPerson)
+			</div>
+            <div class="half">
+				 @Html.Label("RoomTypeID")	<br/>
+				  @Html.DropDownList("RoomTypeID",(IEnumerable<SelectListItem>)ViewBag.roomtype,"--Select--")
+                 @Html.ValidationMessageFor(model => model.RoomTypeID)
+			</div>
+             <div class="half">
+				 @Html.Label("Amount")	
+				  @Html.TextBoxFor(model => model.Amount)
+                 @Html.ValidationMessageFor(model => model.Amount)
+			</div>
+             <div class="half">
+				 @Html.Label("NumberOfRooms")	
+				  @Html.TextBoxFor(model => model.NumberOfRooms)
+                 @Html.ValidationMessageFor(model => model.NumberOfRooms)
+			   </div>
+
+
+
+
+			
+
+			<div class="clearfix"></div>
+
+			<input type="submit" value="Submit" class="auto_width" />
+
+		</div>
+
+	</section>
+    </div>
+    }
