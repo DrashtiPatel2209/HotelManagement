@@ -40,7 +40,6 @@ steps:
   inputs:
     testSelector: '$(Parameters.testSelector)'
     testAssemblyVer2: '**\$(BuildConfiguration)\**\*Test*.dll'
-    vsTestVersion: 15.0
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
