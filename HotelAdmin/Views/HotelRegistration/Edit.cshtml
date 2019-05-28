@@ -6,94 +6,101 @@
 }
 
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.ValidationSummary(true)
 
     <fieldset>
-         <div class="wrapper">
-             <div class="row">
+        <div class="wrapper">
+            <div class="row">
                 <div class="col-sm-12">
-                <section class="panel">
-                <header class="panel-heading">
-                
-                    <span class="tools pull-right">
-                        <a href="javascript:;" class="fa fa-chevron-down"></a>
-                        <a href="javascript:;" class="fa fa-times"></a>
-                     </span>
-                </header>
-                <div class="panel-body">
-                <div class="adv-table editable-table ">
-                <div class="clearfix">
-                    
-                </div>
-                <div class="space15"></div>
-                <table class="table table-striped table-hover table-bordered" id="editable-sample">
-           
-                     <legend> MasterHotelRegistration</legend>
-                <tbody>
-                
- <thead>
-       
-     <tr>
-                  
-                    <th><div class="editor-label">
-            @Html.LabelFor(model => model.HotelTypeID)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.HotelTypeID)
-            @Html.ValidationMessageFor(model => model.HotelTypeID)
-        </div>
+                    <section class="panel">
+                        <header class="panel-heading">
 
-                    </th>
-                    <th> <div class="editor-label">
-            @Html.LabelFor(model => model.Address)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Address)
-            @Html.ValidationMessageFor(model => model.Address)
-        </div>
+                            <span class="tools pull-right">
+                                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                <a href="javascript:;" class="fa fa-times"></a>
+                            </span>
+                        </header>
+                        <div class="panel-body">
+                            <div class="adv-table editable-table ">
+                                <div class="clearfix">
 
-                    </th>
-                    <th><div class="editor-label">
-            @Html.LabelFor(model => model.Pincode)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Pincode)
-            @Html.ValidationMessageFor(model => model.Pincode)
-        </div></th>
-                    <th> <div class="editor-label">
-            @Html.LabelFor(model => model.EmailID)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.EmailID)
-            @Html.ValidationMessageFor(model => model.EmailID)
-        </div></th>
-                 <th>
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Password)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Password)
-            @Html.ValidationMessageFor(model => model.Password)
-        </div>
-             </th>
-          </tr>
-      
-        <p>
-            <input type="submit" value="Save" />
-        </p>
-                       </thead>
-                     </tbody>
-                </table>
+                                </div>
+                                <div class="space15"></div>
+                                <table class="table table-striped table-hover table-bordered" id="editable-sample">
+
+                                    <legend>Hotel Registration</legend>
+                                    <tbody>
+
+                                    <thead>
+
+                                        <tr>
+
+                                            @*<th>
+                                                <div class="editor-label">
+                                                    @Html.LabelFor(model => model.HotelTypeID)
+                                                </div>
+                                                <div class="editor-field">
+                                        @Html.DropDownlist("HotelTYpeID", (IEnumerable<SelectListItem>)ViewBag.HotelType, "--Select--", new { @class = "form-control", @placeholder = "Hotel Type" },, new { disabled = "disabled" })
+                                                    @Html.TextBoxFor(model => model.HotelTypeID, new { disabled = "disabled" })
+                                                    @Html.ValidationMessageFor(model => model.HotelTypeID)
+                                                </div>
+                                            </th>*@
+
+                                            <th>
+                                                <div class="editor-label">
+                                                    @Html.LabelFor(model => model.Address)
+                                                </div>
+                                                <div class="editor-field">
+                                                    @Html.EditorFor(model => model.Address)
+                                                    @Html.ValidationMessageFor(model => model.Address)
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="editor-label">
+                                                    @Html.LabelFor(model => model.Pincode)
+                                                </div>
+                                                <div class="editor-field">
+                                                    @Html.EditorFor(model => model.Pincode)
+                                                    @Html.ValidationMessageFor(model => model.Pincode)
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="editor-label">
+                                                    @Html.LabelFor(model => model.EmailID)
+                                                </div>
+                                                <div class="editor-field">
+                                                    @Html.EditorFor(model => model.EmailID)
+                                                    @Html.ValidationMessageFor(model => model.EmailID)
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="editor-label">
+                                                    @Html.LabelFor(model => model.Password)
+                                                </div>
+                                                <div class="editor-field">
+                                                    @Html.EditorFor(model => model.Password)
+                                                    @Html.ValidationMessageFor(model => model.Password)
+                                                </div>
+                                            </th>
+                                        </tr>
+
+                                        <p>
+                                            @*<input type="submit" value="Save" />*@
+                                        </p>
+                                    </thead>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                </div>
-                </section>
-                </div>
-                </div>
+            </div>
     </fieldset>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @*@Html.ActionLink("Back to List", "Index")*@
 </div>
 

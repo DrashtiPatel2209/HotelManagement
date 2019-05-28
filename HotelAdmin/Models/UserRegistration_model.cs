@@ -14,7 +14,7 @@ namespace HotelAdmin.Models
         public string UserAddress { get; set; }
         public int CityID { get; set; }
         public int AreaID { get; set; }
-        public DateTime UserDOB { get; set; }
+        public string UserDOB { get; set; }
         public string Gender { get; set; }
         public string UserOccupation { get; set; }
         public string MaritialStatus { get; set; }

@@ -11,7 +11,7 @@ namespace HotelAdmin.Models
         public string HotelName { get; set; }
         public int HotelTypeID { get; set; }
         public string Address { get; set; }
-        public int Pincode { get; set; }
+        public string Pincode { get; set; }
         public string EmailID { get; set; }
         public string Password { get; set; }
         public string photo { get; set; }

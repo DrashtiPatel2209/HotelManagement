@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Web
+# Visual Studio Express 14 for Web
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelAdmin", "HotelAdmin\HotelAdmin.csproj", "{EE249E9C-0CE5-4E56-A816-45B9958C6207}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelAdminTestProject", "HotelAdminTestProject\HotelAdminTestProject.csproj", "{46C37054-1952-4AB1-8B35-BAD81D8F3BE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{EE249E9C-0CE5-4E56-A816-45B9958C6207}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE249E9C-0CE5-4E56-A816-45B9958C6207}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE249E9C-0CE5-4E56-A816-45B9958C6207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46C37054-1952-4AB1-8B35-BAD81D8F3BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46C37054-1952-4AB1-8B35-BAD81D8F3BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46C37054-1952-4AB1-8B35-BAD81D8F3BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46C37054-1952-4AB1-8B35-BAD81D8F3BE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

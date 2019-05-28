@@ -4,228 +4,232 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-   
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="ThemeBucket">
-  <link rel="shortcut icon" href="#" type="image/png">
 
-  <title>Form Validation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
 
- <link href='@Url.Content("~/css/demo_page.css")' rel="stylesheet" />
-  <link href='@Url.Content("~/css/demo_table.css")' rel="stylesheet" />
-  <link rel="stylesheet" href='@Url.Content("~/css/DT_bootstrap.css")' />
-    
+    <title>Form Validation</title>
 
-  <link href='@Url.Content("~/css/style.css")' rel="stylesheet">
-  <link href='@Url.Content("~/css/style-responsive.css")' rel="stylesheet">
+    <link href='@Url.Content("~/css/demo_page.css")' rel="stylesheet" />
+    <link href='@Url.Content("~/css/demo_table.css")' rel="stylesheet" />
+    <link rel="stylesheet" href='@Url.Content("~/css/DT_bootstrap.css")' />
 
 
+    <link href='@Url.Content("~/css/style.css")' rel="stylesheet">
+    <link href='@Url.Content("~/css/style-responsive.css")' rel="stylesheet">
 
 
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <script src='@Url.Content("~/js/html5shiv.js")'></script>
-  <script src='@Url.Content("~/js/respond.min.js")'></script>
-  <![endif]-->
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src='@Url.Content("~/js/html5shiv.js")'></script>
+    <script src='@Url.Content("~/js/respond.min.js")'></script>
+    <![endif]-->
 </head>
 <body class="sticky-header">
 
-<section>
-    <!-- left side start-->
-    <div class="left-side sticky-left-side">
+    <section>
+        <!-- left side start-->
+        <div class="left-side sticky-left-side">
 
-        <!--logo and iconic logo start-->
-        <div class="logo">
-            <a href="index.html"><img src='@Url.Content("~/images/logo.png")' alt=""></a>
-        </div>
-
-        <div class="logo-icon text-center">
-            <a href="index.html"><img src='@Url.Content("~/images/logo_icon.png")' alt=""></a>
-        </div>
-        <!--logo and iconic logo end-->
-
-
-        <div class="left-side-inner">
-
-            <!-- visible to small devices only -->
-            <div >
-                <ul class="nav nav-pills nav-stacked custom-nav">
-                   @* <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
-                    <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>*@
-                    
-                </ul>
+            <!--logo and iconic logo start-->
+            <div class="logo">
+                <a href="index.html"><img src='@Url.Content("~/images/logo.png")' alt=""></a>
             </div>
 
-            <!--sidebar nav start-->
-            <ul class="nav nav-pills nav-stacked custom-nav">
-                
-                <li ><a href="#"><i class="fa fa-home"></i> <span>Dashboard</span></a>
-                    
-                </li>
-				<li class="menu-list"><a href="index.html"><i class="fa fa-home"></i> <span>Category</span></a>
-                    <ul class="sub-menu-list">
-                        <li><a href='@Url.Action("category","Default1")'>Add Category</a></li>
-                        <li><a href='@Url.Action("index","Default1")'>Search Category</a></li>
-                    </ul>
-                </li>
-                        <li class="menu-list"><a href="index.html"><i class="fa fa-home"></i> <span>SubCategory</span></a>
-                    <ul class="sub-menu-list">
-                        <li><a href='@Url.Action("SubCategory","SubCategory")'>Add Sub Category</a></li>
-                        <li><a href='@Url.Action("index","SubCategory")'>Search Sub Category</a></li>
-                        
-                    </ul>
-                </li>
-				<li class="menu-list"><a href="index.html"><i class="fa fa-home"></i> <span>Hotel Type</span></a>
-                    <ul class="sub-menu-list">
-                        <li><a href='@Url.Action("HotelType","HotelType")'>Add Hotel Type</a></li>
-                        <li><a href='@Url.Action("index","HotelType")'>Search Hotel Type</a></li>
-                        
-                    </ul>
-					<li class="menu-list"><a href="index.html"><i class="fa fa-home"></i> <span>City</span></a>
-                    <ul class="sub-menu-list">
-                        <li><a href='@Url.Action("City","City")'>Add City</a></li>
-                         <li><a href='@Url.Action("index","City")'>Search City</a></li>
-                        
-                    </ul>
-					<li class="menu-list"><a href="index.html"><i class="fa fa-home"></i> <span>Area</span></a>
-                    <ul class="sub-menu-list">
-                        <li><a href='@Url.Action("Area","Area")'>Add Area</a></li>
-                         <li><a href='@Url.Action("index","Area")'>Search Area</a></li>
-                        
-                    </ul>
-					<li class="menu-list"><a href="index.html"><i class="fa fa-home"></i> <span>Room Type</span></a>
-                    <ul class="sub-menu-list">
-                        <li><a href='@Url.Action("RoomType","RoomType")'>Add Room Type</a></li>
-                        <li><a href='@Url.Action("Index","RoomType")'>Search Room Type</a></li>
-                        
-                    </ul>
-                </li>
-				<li class="menu-list"><a href="index.html"><i class="fa fa-home"></i> <span>Manage feedback</span></a>
-                    <ul class="sub-menu-list">
-                        <li><a href='@Url.Action("index","Feedback")'>View Feedback</a></li>
-                       
-                    </ul>
-                </li>
-				<li class="menu-list"><a href="index.html"><i class="fa fa-home"></i> <span>Manage Complain</span></a>
-                    <ul class="sub-menu-list">
-                        <li><a href='@Url.Action("Complain","Complain")'>Revert Back</a></li>
-                        
-                    </ul>
-                </li>
-                <li class="menu-list"><a href="index.html"><i class="fa fa-home"></i> <span>User's Record</span></a>
-                    <ul class="sub-menu-list">
-                        <li><a href='@Url.Action("index1","Form")'>See User's Record</a></li>
-                       
-                    </ul>
-                </li>
-                 </li>
-                <li class="menu-list"><a href="index.html"><i class="fa fa-home"></i> <span>Hotel's record</span></a>
-                    <ul class="sub-menu-list">
-                        <li><a href='@Url.Action("Index","HotelRegistration")'>See Hotel's Record</a></li>
-                    </ul>
-                </li>
-            
-            </ul>
-            
+            <div class="logo-icon text-center">
+                <a href="index.html"><img src='@Url.Content("~/images/logo_icon.png")' alt=""></a>
+            </div>
+            <!--logo and iconic logo end-->
 
 
-            <!--sidebar nav end-->
+            <div class="left-side-inner">
 
+                <!-- visible to small devices only -->
+                <div>
+                    <ul class="nav nav-pills nav-stacked custom-nav">
+                        @* <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>*@
+
+                    </ul>
+                </div>
+
+                <!--sidebar nav start-->
+                <ul class="nav nav-pills nav-stacked custom-nav">
+
+                    @*  <li ><a href="#"><i class="fa fa-home"></i> <span>Dashboard</span></a> </li>*@
+
+
+                    <li class="menu-list">
+                        <a href="index.html"><i class="fa fa-home"></i> <span>Category</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href='@Url.Action("category","Default1")'>Add Category</a></li>
+                            <li><a href='@Url.Action("index","Default1")'>Search Category</a></li>
+                        </ul>
+                    </li>
+                    @*<li class="menu-list">
+                        <a href="index.html"><i class="fa fa-home"></i> <span>SubCategory</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href='@Url.Action("SubCategory","SubCategory")'>Add Sub Category</a></li>
+                            <li><a href='@Url.Action("index","SubCategory")'>Search Sub Category</a></li>
+
+                        </ul>
+                    </li>*@
+                    @*<li class="menu-list">
+                        <a href="index.html"><i class="fa fa-home"></i> <span>Hotel Type</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href='@Url.Action("HotelType","HotelType")'>Add Hotel Type</a></li>
+                            <li><a href='@Url.Action("index","HotelType")'>Search Hotel Type</a></li>
+
+                        </ul>
+
+                    </li>*@
+                    <li class="menu-list">
+                        <a href="index.html"><i class="fa fa-home"></i> <span>City</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href='@Url.Action("City","City")'>Add City</a></li>
+                            <li><a href='@Url.Action("index","City")'>Search City</a></li>
+
+                        </ul>
+                    @*<li class="menu-list">
+                        <a href="index.html"><i class="fa fa-home"></i> <span>Area</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href='@Url.Action("Area","Area")'>Add Area</a></li>
+                            <li><a href='@Url.Action("index","Area")'>Search Area</a></li>
+
+                        </ul>
+                    </li>*@
+                    <li class="menu-list">
+                        <a href="index.html"><i class="fa fa-home"></i> <span>Room Type</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href='@Url.Action("RoomType","RoomType")'>Add Room Type</a></li>
+                            <li><a href='@Url.Action("Index","RoomType")'>Search Room Type</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="menu-list">
+                        <a href="index.html"><i class="fa fa-home"></i> <span>Manage feedback</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href='@Url.Action("index","Feedback")'>View Feedback</a></li>
+
+                        </ul>
+                    </li>
+                    @*<li class="menu-list">
+                        <a href="index.html"><i class="fa fa-home"></i> <span>Manage Complain</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href='@Url.Action("Complain","Complain")'>Revert Back</a></li>
+
+                        </ul>
+                    </li>*@
+                    <li class="menu-list">
+                        <a href="index.html"><i class="fa fa-home"></i> <span>User's Record</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href='@Url.Action("Index1","Form")'>See User's Record</a></li>
+
+                        </ul>
+                    </li>
+                    @*<li class="menu-list">
+                        <a href="index.html"><i class="fa fa-home"></i> <span>Hotel's record</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a href='@Url.Action("Index","HotelRegistration")'>See Hotel's Record</a></li>
+                        </ul>
+                    </li>*@
+
+                </ul>
+
+
+
+                <!--sidebar nav end-->
+
+            </div>
         </div>
-    </div>
-    <!-- left side end-->
-    
-    <!-- main content start-->
-    <div class="main-content" >
+        <!-- left side end-->
+        <!-- main content start-->
+        <div class="main-content">
 
-        <!-- header section start-->
-        <div class="header-section">
+            <!-- header section start-->
+            <div class="header-section">
 
-        <!--toggle button start-->
-        <a class="toggle-btn"><i class="fa fa-bars"></i></a>
-        <!--toggle button end-->
-
-        <!--search start-->
-        <form class="searchform" action="index.html" method="post">
-            <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
-        </form>
-        <!--search end-->
-
-        <!--notification menu start -->
+                <!--toggle button start-->
+                <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+                <!--toggle button end-->
+                <!--search start-->
+                <form class="searchform" action="index.html" method="post">
+                    <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
+                </form>
+                <!--search end-->
+                <!--notification menu start -->
                 <div class="menu-right">
-            <ul class="notification-menu">
-                <li>
-                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        @*<img src="images/user-avatar.png" alt="" />*@
-                        Admin
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                        @*<li><a href="#"><i class="fa fa-user"></i>  Profile</a></li>
-                        <li><a href="#"><i class="fa fa-cog"></i>  Settings</a></li>*@
-                        <li><a href="~/Admin/Login"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                    <ul class="notification-menu">
+                        <li>
+                            <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                @*<img src="images/user-avatar.png" alt="" />*@
+                                Admin
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                                @*<li><a href="#"><i class="fa fa-user"></i>  Profile</a></li>
+                                    <li><a href="#"><i class="fa fa-cog"></i>  Settings</a></li>*@
+                                <li><a href="~/Admin/Login"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
+                </div>
 
-            </ul>
-        </div>
+                <!--notification menu end -->
 
-        <!--notification menu end -->
-
-        </div>
-        <!-- header section end-->
-
-
-        <!--body wrapper start-->
-        <div class="wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <section class="panel">
-                        <div>
-        @RenderBody()
-    </div>
-                    </section>
+            </div>
+            <!-- header section end-->
+            <!--body wrapper start-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="panel">
+                            <div>
+                                @RenderBody()
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
-            </div>
-        <!--body wrapper end-->
-
-        <!--footer section start-->
-        <footer>
-            2014 &copy; AdminEx by ThemeBucket
-        </footer>
-        <!--footer section end-->
+            <!--body wrapper end-->
+            <!--footer section start-->
+            <footer>
+                2014 &copy; AdminEx by ThemeBucket
+            </footer>
+            <!--footer section end-->
 
 
-    </div>
-    <!-- main content end-->
-</section>
+        </div>
+        <!-- main content end-->
+    </section>
 
-<!-- Placed js at the end of the document so the pages load faster -->
-<script src='@Url.Content("~/js/jquery-1.10.2.min.js")'></script>
-<script src='@Url.Content("~/js/jquery-ui-1.9.2.custom.min.js")'></script>
-<script src='@Url.Content("~/js/jquery-migrate-1.2.1.min.js")'></script>
-<script src='@Url.Content("~/js/bootstrap.min.js")'></script>
-<script src='@Url.Content("~/js/modernizr.min.js")'></script>
-<script src='@Url.Content("~/js/jquery.nicescroll.js")'></script>
+    <!-- Placed js at the end of the document so the pages load faster -->
+    <script src='@Url.Content("~/js/jquery-1.10.2.min.js")'></script>
+    <script src='@Url.Content("~/js/jquery-ui-1.9.2.custom.min.js")'></script>
+    <script src='@Url.Content("~/js/jquery-migrate-1.2.1.min.js")'></script>
+    <script src='@Url.Content("~/js/bootstrap.min.js")'></script>
+    <script src='@Url.Content("~/js/modernizr.min.js")'></script>
+    <script src='@Url.Content("~/js/jquery.nicescroll.js")'></script>
 
-<script type="text/javascript" src='@Url.Content("~/js/jquery.validate.min.js")'></script>
-<script src='@Url.Content("~/js/validation-init.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/js/jquery.validate.min.js")'></script>
+    <script src='@Url.Content("~/js/validation-init.js")'></script>
 
-<!--common scripts for all pages-->
-<script src='@Url.Content("~/js/scripts.js")'></script>
+    <!--common scripts for all pages-->
+    <script src='@Url.Content("~/js/scripts.js")'></script>
 
-<!--dynamic table-->
-<script type="text/javascript" language="javascript" src='@Url.Content("~/js/jquery.dataTables.js")'></script>
-<script type="text/javascript" src='@Url.Content("~/js/DT_bootstrap.js")'></script>
-<!--dynamic table initialization -->
-<script src='@Url.Content("~/js/dynamic_table_init.js")'></script>
+    <!--dynamic table-->
+    <script type="text/javascript" language="javascript" src='@Url.Content("~/js/jquery.dataTables.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/js/DT_bootstrap.js")'></script>
+    <!--dynamic table initialization -->
+    <script src='@Url.Content("~/js/dynamic_table_init.js")'></script>
 
 
 
-   
-    
+
 </body>
 </html>

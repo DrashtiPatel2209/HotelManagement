@@ -20,7 +20,9 @@
 
 	<!-- Load JavaScript -->
 	<script src='@Url.Content("~/js1/jquery.min.js")'></script>
-	<script>window.jQuery || document.write('<script src='@Url.Content("~/js1/jquery-1.6.2.min.js")'></script>)'</script>
+    @*<script>window.jQuery || document.write('<script src='@Url.Content("~/js1/jquery-1.6.2.min.js")'/></script>*@
+
+    <script>window.jQuery || document.write('<script src=("js/jquery-1.6.2.min.js")>')</script>
 	<script src='@Url.Content("~/js1/jquery-ui-1.8.16.custom.min.js")'></script>
 	<script src='@Url.Content("~/js1/script.js")'></script>
 	<script src='@Url.Content("~/js1/jquery.fancybox-1.3.4.pack.js")'></script>
@@ -43,30 +45,29 @@
 			<nav>
 				<ul>
 					<li>
-						<a href="browseall.html" class="selected">Browse</a>
+                        <a href='@Url.Action("Index", "Browseall")'>Browse</a>
 						<ul>	
-							<li><a href="browseall.html">Browse all</a></li>
-							<li><a href="browsehotels.html">Browse hotels</a></li>
-							<li><a href="hotel.html" class="selected">Hotel</a></li>
+							<li><a href='@Url.Action("Index", "BrowseHotels")'>Browse hotels</a></li>
+							<li><a href='@Url.Action("Index", "Hotel")'>Hotel</a></li>
 							
 						</ul>
 					</li>
 					<li>
-						<a href="faq.html">Pages</a>
+                        <a href='@Url.Action("Index", "Faq")'>Pages</a>
 						<ul>
-							<li><a href="faq.html">FAQ</a></li>
-							<li><a href="forms.html">Forms</a></li>
+							<li><a href='@Url.Action("Index", "Faq")'>FAQ</a></li>
+							<li><a href='@Url.Action("Index", "Form")' class="selected">Forms</a></li>
 						</ul>
 					</li>
 					<li>
-						<a href="blog.html">Blog</a>
+						<a href='@Url.Action("Index", "Blog")'>Blog</a>
 						<ul>
-							<li><a href="blog.html">Blog</a></li>
+							<li><a href='@Url.Action("Index", "Blog")'>Blog</a></li>
 							
 						</ul>
 					</li>
 					<li>
-						<a href="contact.html">Contact</a>
+                        <a href='@Url.Action("Index", "Contact")'>Contact</a>
 					</li>
 				</ul>
 

@@ -21,16 +21,18 @@ namespace HotelAdmin.Controllers
             
             return View(db.UserRegistrations.ToList());
         }
-              [CustomAuthorization_Admin(LoginPage = "~/Admin/Login")] 
+           //   [CustomAuthorization_Admin(LoginPage = "~/Admin/Login")] 
         public ActionResult Index()
         {
-
+            ViewBag.city = new SelectList(db.Cities, "CityID", "CityName");
+            ViewBag.area = new SelectList(db.Areas, "AreaID", "AreaName");
             return View();
         }
        
         [HttpPost]
         public ActionResult Index(UserRegistration_model cat)
         {
+            ViewBag.city = new SelectList(db.Cities, "CityID", "CityName");
             UserRegistration tblcat = new UserRegistration();
             tblcat.UserName  = cat.UserName;
             tblcat.Password = cat.Password;
@@ -38,7 +40,7 @@ namespace HotelAdmin.Controllers
             tblcat.UserID = cat.UserID;
             tblcat.UserAddress = cat.UserAddress;
             tblcat.CityID = cat.CityID;
-            tblcat.AreaID = cat.AreaID;
+            tblcat.AreaID = 1;
             tblcat.UserDOB = cat.UserDOB;
             tblcat.Gender = cat.Gender;
             tblcat.UserOccupation = cat.UserOccupation;
@@ -46,24 +48,24 @@ namespace HotelAdmin.Controllers
             tblcat.Email_id = cat.EmailID;
             db.UserRegistrations.InsertOnSubmit(tblcat);
             db.SubmitChanges();
-            return View();
+            return RedirectToAction("Index","UserLogIn");
         }
-              [CustomAuthorization_Admin(LoginPage = "~/Admin/Login")] 
+         [CustomAuthorization_Admin(LoginPage = "~/Admin/Login")] 
          public ActionResult Edit(int id)
         {
             UserRegistration_model cat = db.UserRegistrations.Where(x => x.UserID == id).Select(x => new UserRegistration_model()
-            {   
-                UserName  = x.UserName,
+            {   UserID = id,
+                UserName = x.UserName,
                 Password = x.Password,
                 UserPhoneNumber = x.UserPhoneNumber,
                 UserAddress = x.UserAddress,
-               CityID = x.CityID,
-               AreaID = x.AreaID,
-               UserDOB = x.UserDOB,
+                CityID = x.CityID,
+                AreaID = 1,
+                UserDOB = x.UserDOB,
                 Gender = x.Gender,
-               UserOccupation = x.UserOccupation,
-               MaritialStatus = x.Maritial_Status,
-               EmailID = x.Email_id
+                UserOccupation = x.UserOccupation,
+                MaritialStatus = x.Maritial_Status,
+                EmailID = x.Email_id
             }).SingleOrDefault();
             return View(cat);
         }
@@ -77,7 +79,7 @@ namespace HotelAdmin.Controllers
             tblcat.UserPhoneNumber = cat.UserPhoneNumber;
              tblcat.UserAddress = cat.UserAddress;
              tblcat.CityID = cat.CityID;
-            tblcat.AreaID = cat.AreaID;
+            tblcat.AreaID = 1;
            tblcat.UserDOB = cat.UserDOB;
            tblcat.Gender = cat.Gender;
              tblcat.UserOccupation = cat.UserOccupation;

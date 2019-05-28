@@ -80,6 +80,7 @@ namespace HotelAdmin.Controllers
         [CustomAuthorization_Hotel(LoginPage = "~/Admin/Login")] 
         public ActionResult Edit()
         {
+            ViewBag.hoteltype = new SelectList(db.MasterHotelTypes, "HotelTypeID", "HotelTypeName");
             int id = Convert.ToInt32(Session["HotelId"]);
             MasterHotelRegistration_model cat = db.MasterHotelRegistrations.Where(x => x.HotelID == id).Select(x =>new MasterHotelRegistration_model()
             {
@@ -96,15 +97,16 @@ namespace HotelAdmin.Controllers
         [HttpPost]
         public ActionResult Edit(MasterHotelRegistration_model cat)
         {
-            MasterHotelRegistration tblcat = db.MasterHotelRegistrations.Where(x => x.HotelID == cat.HotelID).Single<MasterHotelRegistration>();
-            tblcat.HotelID = cat.HotelID;
+
+            int id = Convert.ToInt32(Session["HotelId"]);
+            MasterHotelRegistration tblcat = db.MasterHotelRegistrations.Where(x => x.HotelID == id).Single<MasterHotelRegistration>();
+            tblcat.HotelID = id;
             tblcat.HotelName = cat.HotelName;
             tblcat.HotelTypeID = cat.HotelTypeID;
             tblcat.Address = cat.Address;
             tblcat.Pincode = cat.Pincode;
             tblcat.EmailID = cat.EmailID;
             tblcat.Password = cat.Password;
-
             db.SubmitChanges();
             return View();
         }

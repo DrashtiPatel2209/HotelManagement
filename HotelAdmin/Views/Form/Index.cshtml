@@ -15,18 +15,16 @@
 
 		<div action="#" class="grey">
 
-			<div class="half">
+			@*<div class="half">
 			 @Html.Label("User ID")	
                @Html.TextBoxFor(model => model.UserID)
                  @Html.ValidationMessageFor(model => model.UserID)
-			</div>
+			</div>*@
 
 			<div class="half last">
                  @Html.Label("User Name")	
                @Html.TextBoxFor(model => model.UserName)
                  @Html.ValidationMessageFor(model => model.UserName)
-				
-			
 			</div>
 
 			<div class="half">
@@ -52,21 +50,19 @@
 				</div>
 
 			<div class="half last">
-				@Html.Label("CityID")	
-                 @Html.TextBoxFor(model => model.CityID)
-                 @Html.ValidationMessageFor(model => model.CityID)
-                
-
-                                        
+                @Html.Label("CityID")
+                @Html.DropDownList("CityID", (IEnumerable<SelectListItem>)ViewBag.city, "--Select--", new { @class = "form-control" })					
+             @*   @Html.TextBoxFor(model => model.CityID)*@
+                 @Html.ValidationMessageFor(model => model.CityID)                                        
 				
 			</div>
 
-			<div class="half">
+			@*<div class="half">
 				@Html.Label("AreaID")	
-               @Html.TextBoxFor(model => model.AreaID)
-                 @Html.ValidationMessageFor(model => model.AreaID)
-				
-			</div>
+                @Html.DropDownList("AreaID", (IEnumerable<SelectListItem>)ViewBag.area, "--Select--", new { @class = "form-control" })
+               @Html.TextBoxFor(model => model.AreaID)*@
+               @*  @Html.ValidationMessageFor(model => model.AreaID)*@
+			@*</div>*@
 
 			<div class="half last">
 				@Html.Label("UserDOB")	

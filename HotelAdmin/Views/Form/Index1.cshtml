@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
-<h2>Index1</h2>
+<h2>Users</h2>
 
 <p>
     @Html.ActionLink("Create New", "Index")
@@ -15,7 +15,7 @@
         <div class="col-sm-12">
         <section class="panel">
         <header class="panel-heading">
-            Dynamic Table
+            List of Users
             <span class="tools pull-right">
                 <a href="javascript:;" class="fa fa-chevron-down"></a>
                 <a href="javascript:;" class="fa fa-times"></a>
@@ -36,9 +36,9 @@
             @Html.DisplayNameFor(model => model.UserAddress)
         </th>
        
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.AreaID)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.UserDOB)
         </th>
@@ -65,9 +65,9 @@
             @Html.DisplayFor(modelItem => item.UserAddress)
         </td>
        
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.AreaID)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.UserDOB)
         </td>

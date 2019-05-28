@@ -46,7 +46,7 @@ namespace HotelAdmin.Controllers
              [CustomAuthorization_Hotel(LoginPage = "~/Admin/Login")]
         public ActionResult Edit(int id)
         {
-           
+            ViewBag.roomtype = new SelectList(db.MasterRoomTypes, "RoomTypeID", "RoomTypeName");
             HotelRoom_Model cat = db.HotelRooms.Where(x => x.HotelRoomID == id).Select(x =>new HotelRoom_Model()
             {
                 HotelRoomID = x.HotelRoomID,
@@ -56,10 +56,10 @@ namespace HotelAdmin.Controllers
             }).SingleOrDefault();
         return View(cat);
         }
-
         [HttpPost]
-            public ActionResult Edit(HotelRoom_Model cat)
+        public ActionResult Edit(HotelRoom_Model cat)
         {
+            ViewBag.roomtype = new SelectList(db.MasterRoomTypes, "RoomTypeID", "RoomTypeName");
             HotelRoom tblcat = db.HotelRooms.Where(x => x.HotelRoomID == cat.HotelRoomID).Single<HotelRoom>();
             tblcat.HotelID = Convert.ToInt32(Session["HotelId"]);
             tblcat.RoomTypeID = cat.RoomTypeID;

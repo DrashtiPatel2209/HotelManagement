@@ -100,7 +100,7 @@
         <elementListCompartment Id="c4b84984-0bae-4edc-9946-058ced2f0eb5" absoluteBounds="4.015, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(0.84375 : 4.125); (0.84375 : 3.07859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(0.84375 : 4.125); (0.84375 : 3.07859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/UserRegistration/UserRegistration_Area" />
       <nodes>
         <classShapeMoniker Id="f99a3e05-7053-41c7-9ca3-142741c032dc" />
